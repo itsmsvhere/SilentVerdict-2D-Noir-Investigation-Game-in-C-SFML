@@ -1,0 +1,150 @@
+================================================================
+  SILENT VERDICT v3 — Complete Asset Guide
+================================================================
+
+FOLDER STRUCTURE
+────────────────
+  SilentVerdict3/
+  ├── assets/
+  │   ├── images/
+  │   │   ├── evidence_knife.png
+  │   │   ├── evidence_footprints.png
+  │   │   ├── evidence_phone.png
+  │   │   ├── husband_neutral.png
+  │   │   ├── husband_agony.png
+  │   │   ├── husband_cuffed.png
+  │   │   ├── chef_neutral.png
+  │   │   ├── chef_agony.png
+  │   │   ├── colleague_neutral.png
+  │   │   ├── colleague_agony.png
+  │   │   ├── suicide_neutral.png
+  │   │   └── suicide_agony.png
+  │   └── sounds/
+  │       ├── click.wav
+  │       ├── transition.wav
+  │       ├── evil_laugh.wav
+  │       └── husband_grunt.wav
+  ├── bg_menu.png
+  ├── bg_intro.png
+  ├── bg_forest.png
+  ├── bg_interrogation.png
+  └── bg_verdict.png
+
+ALL IMAGES: PNG recommended, any resolution
+  (game auto-scales everything)
+
+================================================================
+ IMAGE PROMPTS (use Bing Image Creator / Ideogram / Canva)
+================================================================
+
+EVIDENCE ICONS (square, transparent background preferred)
+──────────────────────────────────────────────────────────
+evidence_knife.png
+  "blood stained hunting knife isolated on dark background,
+   realistic, top down view, moody lighting, noir style"
+
+evidence_footprints.png
+  "muddy boot footprints isolated on dark background,
+   forensic evidence style, realistic, dark moody"
+
+evidence_phone.png
+  "old smartphone with cracked screen isolated on dark
+   background, call log visible, noir, forensic"
+
+──────────────────────────────────────────────────────────
+CHARACTER PORTRAITS (portrait orientation, 400x600px ideal)
+──────────────────────────────────────────────────────────
+husband_neutral.png
+  "middle aged man, dark shirt, calm but tense expression,
+   noir style, dark background, cinematic portrait"
+
+husband_agony.png
+  "middle aged man, sweating, panicked eyes, distressed,
+   under interrogation lamp, noir cinematic portrait"
+
+husband_cuffed.png
+  "middle aged man in handcuffs, looking down in guilt,
+   police station, noir cinematic, dramatic lighting"
+
+chef_neutral.png
+  "male chef in partial uniform, calm confident expression,
+   noir style dark background, cinematic portrait"
+
+chef_agony.png
+  "male chef, confused and worried expression, defensive
+   posture, dark noir interrogation lighting"
+
+colleague_neutral.png
+  "young professional man, office shirt, calm expression,
+   noir cinematic portrait, dark background"
+
+colleague_agony.png
+  "young professional man, shocked and anxious, distressed,
+   under interrogation lamp, noir cinematic"
+
+suicide_neutral.png
+  "abstract silhouette of a person standing alone in a
+   dark forest, melancholic, noir style"
+
+suicide_agony.png
+  "abstract silhouette of a figure in despair, dark forest
+   background, noir, melancholic, dramatic"
+
+──────────────────────────────────────────────────────────
+BACKGROUNDS (landscape 900x620px or similar)
+──────────────────────────────────────────────────────────
+bg_menu.png
+  "dark noir city skyline at night, rain, amber and blue,
+   cinematic, moody, film noir style"
+
+bg_intro.png
+  "dark detective office, case files on desk, dim lamp,
+   noir atmosphere, dramatic shadows"
+
+bg_forest.png
+  "dark misty forest at night, crime scene tape, moonlight
+   through trees, fog, cinematic noir"
+
+bg_interrogation.png
+  "dark interrogation room, single hanging bulb, concrete
+   walls, one chair and table, noir style"
+
+bg_verdict.png
+  "empty dark courtroom, single spotlight on the stand,
+   dramatic shadows, noir atmosphere"
+
+================================================================
+ SOUND GUIDE
+================================================================
+
+click.wav       — Short UI click (50-100ms)
+transition.wav  — Whoosh or page-turn sound (0.5-1s)
+evil_laugh.wav  — Villain laugh for wrong verdict (2-4s)
+husband_grunt.wav — Angry/pained grunt for correct arrest (1-2s)
+
+Free sound sources:
+  https://freesound.org       (free, requires account)
+  https://pixabay.com/sound-effects/  (free, no account)
+  https://mixkit.co/free-sound-effects/  (free)
+
+================================================================
+ BUILD COMMAND
+================================================================
+
+  g++ -std=c++17 main.cpp Game.cpp SceneManager.cpp ^
+      UIManager.cpp DialogueSystem.cpp ^
+      EvidenceSystem.cpp AudioManager.cpp ^
+      -o SilentVerdict.exe ^
+      -IC:\SFML\include -LC:\SFML\lib ^
+      -lsfml-graphics -lsfml-window ^
+      -lsfml-system -lsfml-audio
+
+  copy C:\SFML\bin\sfml-graphics-2.dll .
+  copy C:\SFML\bin\sfml-window-2.dll .
+  copy C:\SFML\bin\sfml-system-2.dll .
+  copy C:\SFML\bin\sfml-audio-2.dll .
+  copy C:\SFML\bin\openal32.dll .
+
+  SilentVerdict.exe
+
+================================================================
